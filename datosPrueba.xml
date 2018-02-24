@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mensajeria>
+	<cliente>
+		<idPersona>1</idPersona>
+		<idCliente>c1</idCliente>
+		<nombre>Juan</nombre>
+		<apellidos>Gutierrez Sanz</apellidos>
+		<email>jugusa@gmail.com</email>
+		<telefono>654789123</telefono>
+		<direccion>Calle 1 N1</direccion>
+		<codPost>41008</codPost>
+		<pais>España</pais>
+	</cliente>
+	
+	<cliente>
+		<idPersona>2</idPersona>
+		<idCliente>c2</idCliente>
+		<nombre>Francisco</nombre>
+		<apellidos>Martinez Alba</apellidos>
+		<email>frmaal@gmail.com</email>
+		<telefono>689745123</telefono>
+		<direccion>Calle 1 N2</direccion>
+		<codPost>41008</codPost>
+		<pais>España</pais>
+	</cliente>
+
+	<cliente>
+		<idPersona>3</idPersona>
+		<idCliente>c3</idCliente>
+		<nombre>Antonio</nombre>
+		<apellidos>Campaña Martín</apellidos>
+		<email>ancama@gmail.com</email>
+		<telefono>789456321</telefono>
+		<direccion>Calle 2 N1</direccion>
+		<codPost>41009</codPost>
+		<pais>España</pais>
+	</cliente>
+
+	<empleado>
+		<idPersona>4</idPersona>
+		<idEmpleado>e1</idEmpleado>
+		<nombre>Alba</nombre>
+		<apellidos>Galdámez Blanco</apellidos>
+		<gestor>No</gestor>
+		<manager>Sí</manager>
+		<oficina>A1</oficina>
+	</empleado>
+	
+	<empleado>
+		<idPersona>5</idPersona>
+		<idEmpleado>e2</idEmpleado>
+		<nombre>Julián</nombre>
+		<apellidos>Durán Suárez</apellidos>
+		<gestor>No</gestor>
+		<manager>No</manager>
+		<oficina>A2</oficina>
+	</empleado>
+
+	<empleado>
+		<idPersona>6</idPersona>
+		<idEmpleado>e3</idEmpleado>
+		<nombre>Alberto</nombre>
+		<apellidos>Arbea Pérez</apellidos>
+		<gestor>Sí</gestor>
+		<manager>Sí</manager>
+		<oficina>A3</oficina>
+	</empleado>
+
+	<paquete>
+		<idPaquete>1</idPaquete>
+		<Tarifa>50</Tarifa>
+		<fechaEntrega>13/02/2018</fechaEntrega>
+		<volumen>1</volumen>
+		<peso>2</peso>
+		<valor>120</valor>
+		<urgente>No</urgente>
+		<entregado>No</entregado>
+		<adminPublica>No</adminPublica>
+		<internacional>No</internacional>
+		<asegurado>Si</asegurado>	
+	</paquete>
+	
+	<paquete>
+		<idPaquete>2</idPaquete>
+		<Tarifa>100</Tarifa>
+		<fechaEntrega>01/12/2017</fechaEntrega>
+		<volumen>1</volumen>
+		<peso>4</peso>
+		<valor>200</valor>
+		<urgente>No</urgente>
+		<entregado>Si</entregado>
+		<adminPublica>Si</adminPublica>
+		<internacional>No</internacional>
+		<asegurado>Si</asegurado>	
+	</paquete>
+
+	<paquete>
+		<idPaquete>3</idPaquete>
+		<Tarifa>200</Tarifa>
+		<fechaEntrega>20/01/2018</fechaEntrega>
+		<volumen>1</volumen>
+		<peso>1.5</peso>
+		<valor>100</valor>
+		<urgente>Si</urgente>
+		<entregado>Si</entregado>
+		<adminPublica>No</adminPublica>
+		<internacional>Si</internacional>
+		<asegurado>Si</asegurado>	
+	</paquete>
+
+	<queja>
+		<idQueja>1Q</idQueja>
+		<descripcion>Paquete no entregado</descripcion>
+		<fecha>05/01/2018</fecha>
+		<resuelta>No</resuelta>
+	</queja>
+
+	<queja>
+		<idQueja>2Q</idQueja>
+		<descripcion>Producto dañado</descripcion>
+		<fecha>20/01/2018</fecha>
+		<resuelta>Si</resuelta>
+	</queja>
+
+	<queja>
+		<idQueja>3Q</idQueja>
+		<descripcion>Paquete erróneo</descripcion>
+		<fecha>05/11/2017</fecha>
+		<resuelta>No</resuelta>
+	</queja>
+
+	<aduana>
+		<idDeclaracion>1D</idDeclaracion>
+		<articulo>Archivadores</articulo>
+		<declaracion>Documentos en distintos archivadores</declaracion>
+		<tasa>10</tasa>
+	</aduana>
+		
+	<aduana>
+		<idDeclaracion>2D</idDeclaracion>
+		<articulo>Pc de sobremesa</articulo>
+		<declaracion>Torre de pc con sus componentes</declaracion>
+		<tasa>30</tasa>
+	</aduana>
+	
+	<aduana>
+		<idDeclaracion>3D</idDeclaracion>
+		<articulo>Juego de vasos</articulo>
+		<declaracion>Vasos de cristal</declaracion>
+		<tasa>10</tasa>
+	</aduana>
+</mensajeria>
+

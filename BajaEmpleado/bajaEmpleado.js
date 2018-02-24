@@ -1,0 +1,1 @@
+//$("#bajaEmpl").click(altaCasa);

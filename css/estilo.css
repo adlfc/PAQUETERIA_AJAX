@@ -1,0 +1,165 @@
+*{margin:0;padding:0;}
+
+body
+{
+	background-color: #eee;
+}
+
+.navbar
+{
+    border-radius: 0px;
+}
+
+.navbar-brand
+{
+    color: #FDE3A7 !important;
+}
+
+.navbar-brand:hover
+{
+    color: #F4B350 !important;
+}
+
+.dropdown-menu
+{
+	width: 200px;
+	padding: 0;
+}
+
+.dropdown-menu > li > a
+{
+	padding: 8px 8px;
+}
+
+#uml
+{
+    margin: 100px 0 30px 350px;
+}
+
+#uml > img
+{
+    width: 800px;
+}
+
+.form-horizontal
+{
+    margin: 40px 0;
+}
+
+/* ######################################################################################## */
+
+.vertical-menu {
+	float: left;
+    width: 200px;
+    height: 100vh;
+    background-color: #ddd; /* Set a width if you like */
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+/* ######################################################################################## */
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 16px 8px 16px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+#activo
+{
+	background-color: #222;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #F9690E;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 4px;
+}
+
+#activo:hover
+{
+	color: #F4B350;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 18px; /* Increased text to enable scrolling */
+    padding: 30px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    color: #fff;
+    
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #191919;
+    padding-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.titulo
+{
+	font: normal bold 22px Arial, Tahoma;
+	margin: 0 0 30px 0;
+	color: #F9690E;
+}
