@@ -39,7 +39,7 @@ function aceptarAltaCliente() {
         };
 
         var oCliente=JSON.stringify(cliente);
-        $.ajax({url:"altaCliente.php",
+        $.ajax({url:"php/cliente/altaCliente.php",
                 data:{datos:oCliente},
                 async:true,
                 dataType:'json',
@@ -198,7 +198,7 @@ function buscaCliente(sIdCliente){
 
     var sParametroGET = encodeURI("id="+sIdCliente);
 
-    var sURL = encodeURI("buscaCliente.php?");
+    var sURL = encodeURI("php/cliente/buscaCliente.php?");
 
     llamadaAjaxValidacionCliente(sURL,sParametroGET);
 
