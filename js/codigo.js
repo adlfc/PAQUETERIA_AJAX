@@ -446,8 +446,8 @@ bajaEmpleados.addEventListener("click", bajaEmpleado, false);
 
 function bajaEmpleado()
 {
-	//var bajaEmpleados = document.getElementById("formBajaEmple");
- 	//bajaEmpleados.style.display = "block";
+	var bajaEmpleados = document.getElementById("formBajaEmple");
+ 	bajaEmpleados.style.display = "block";
 
  	var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
@@ -2129,7 +2129,7 @@ function aceptarAltaEmpleado(oEvento){
 	alert(sMensaje);
 }
 
-/*function aceptarEliminarEmpleado()
+function aceptarEliminarEmpleado()
 {
 	var oForm = document.getElementById("formBajaEmple");
     var bValido = true;
@@ -2191,7 +2191,7 @@ function comboEliminarEmpleado()
 	    }
 
     }
-}*/
+}
 
 //#######################################################################
 
@@ -3076,8 +3076,8 @@ function inicio(){
 	document.getElementById("listadoCli").addEventListener("click", mostrarListaClientes,false);
 
 	document.getElementById("aceptarAltaEmple").addEventListener("click", aceptarAltaEmpleado,false);
-	//document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
-	//document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
+	document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
+	document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
 	document.getElementById("modiEmple").addEventListener("click", modificarEmpleado,false);
 	document.getElementById("aceptarModiEmple").addEventListener("click", aceptarModificarEmpleado,false);
 	document.getElementById("listadoEmpl").addEventListener("click", mostrarListaEmpleados,false);
@@ -3866,7 +3866,7 @@ function ocultarFormulariosModificar(){
 	document.getElementById("formAltaAduana").style.display = "none";
 	document.getElementById("formAltaQuejas").style.display = "none";
 	document.getElementById("formBajaCliente").style.display = "none";
-	//document.getElementById("formBajaEmple").style.display = "none";
+	document.getElementById("formBajaEmple").style.display = "none";
 	document.getElementById("formBajArticulo").style.display = "none";
 	
 	document.getElementById("listadoClientes").style.display = "none";
