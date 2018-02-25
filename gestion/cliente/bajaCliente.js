@@ -15,7 +15,7 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
 
           var option = "<label class='titulo'>Baja Cliente</label>";
 
-          option += "<select id='bajaCli' name='bajaClient' class='form-control'>";
+          option += "<select id='bajaCl' name='bajaClient' class='form-control'>";
 
      	//option += "<option>Seleccione un empleado...</option>";
 
@@ -49,8 +49,7 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
 
      function eliminarCliente() 
      {
-
-         var oSelectCliente = $("#bajaCli");
+         var oSelectCliente = $("#bajaCl");
          var iIdCliente = oSelectCliente.val();
          var sDatos = {cliente:iIdCliente};
 
@@ -60,6 +59,7 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
 
      function respuestaBajaCliente(respuesta, sStatus, oAjax)
      {
+          console.log("Hola");
           if(respuesta == true)
           {
                alert("Cliente dado de baja");
