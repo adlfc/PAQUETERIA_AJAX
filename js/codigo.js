@@ -3098,8 +3098,6 @@ function inicio(){
 
 //LISTADOS 
 
-<<<<<<< HEAD
-
 function mostrarListaEmpleados() {
   	
   	vaciarTablas(document.querySelector("#listadoEmpleados"));
@@ -3278,8 +3276,6 @@ function mostrarListaArticulos() {
     document.querySelector("#listadoArtic").appendChild(oTabla);
 }
 
-=======
->>>>>>> 37d6cca36e6c5958ae4fcee708f99a5886d8671c
 //listado paquetes no entregados
 
 function mostrarListaPaquetesNo(){
