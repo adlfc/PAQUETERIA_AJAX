@@ -3073,11 +3073,11 @@ function inicio(){
 	document.getElementById("bajaCli").addEventListener("click", comboEliminarCliente,false);
 	document.getElementById("modiCli").addEventListener("click", modificarCliente,false);
 	document.getElementById("aceptarModiCli").addEventListener("click", aceptarModificarCliente,false);
-	document.getElementById("listadoCli").addEventListener("click", mostrarListaClientes,false);
+	
 
 	document.getElementById("aceptarAltaEmple").addEventListener("click", aceptarAltaEmpleado,false);
-	document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
-	document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
+	//document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
+	//document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
 	document.getElementById("modiEmple").addEventListener("click", modificarEmpleado,false);
 	document.getElementById("aceptarModiEmple").addEventListener("click", aceptarModificarEmpleado,false);
 	document.getElementById("listadoEmpl").addEventListener("click", mostrarListaEmpleados,false);
@@ -3118,131 +3118,6 @@ function inicio(){
 
 
 //LISTADOS 
-//CARGA DE XML
-function loadXMLDoc(filename)
-    {
-        if (window.XMLHttpRequest)
-        {
-            xhttp=new XMLHttpRequest();
-        }
-        else // code for IE5 and IE6
-        {
-            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xhttp.open("GET",filename,false);
-
-        xhttp.send();
-
-        return xhttp.responseXML;
-    }
-
-    var oXML = loadXMLDoc("datosPrueba.xml");
-
-
-function mostrarListaClientes() {
-
-	vaciarTablas(document.querySelector("#listadoClientes"));
-	document.querySelector("#listadoClientes").style.display="block";
-
-	
-	var labelTitulo=document.createElement("label");
-	labelTitulo.setAttribute("class", "titulo");
-	labelTitulo.textContent = "Listado clientes";
-
-	document.querySelector("#listadoClientes").appendChild(labelTitulo);
-
-
-    var lista = oPaqueteria.cogerTodosLosClientes();
-    
-    var oTabla = document.createElement("table");
-	oTabla.setAttribute("class", "table table-striped table-responsive");
-
-    var oThead = oTabla.createTHead();
-    var oFila = oThead.insertRow(-1);
-    var oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Nombre";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Apellidos";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Email";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Teléfono";
-
-        oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Dirección";
-
-        oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Código Postal";
-
-        oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "País";
-
-    var oTBody = oTabla.createTBody();
-
-	var oClientes = oXML.getElementsByTagName("cliente");
-
-	for (var i = 0; i < oClientes.length; i++) {
-		
-		oFila = oTBody.insertRow(-1);
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("nombre")[0].textContent;
-
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("apellidos")[0].textContent;
-		
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("email")[0].textContent;
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("telefono")[0].textContent;
-		
-
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("direccion")[0].textContent;
-		
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("codPost")[0].textContent;
-		
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oClientes[i].getElementsByTagName("pais")[0].textContent;
-		
-	}
-	
-	
-	
-	
-    for (i = 0; i < lista.length; i++) {
-        
-    	if(lista[i].sActivo == true)
-    	{
-	        oFila = oTBody.insertRow(-1);
-	        
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sNombre));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sApellidos));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sEmail));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sTelefono));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sDireccion));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sCodPost));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sPais));
-    	}
-    }
-
-    document.querySelector("#listadoClientes").appendChild(oTabla);
-}
 
 
 function mostrarListaEmpleados() {
