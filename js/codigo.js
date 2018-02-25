@@ -3076,8 +3076,8 @@ function inicio(){
 	
 
 	document.getElementById("aceptarAltaEmple").addEventListener("click", aceptarAltaEmpleado,false);
-	document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
-	document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
+	//document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
+	//document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
 	document.getElementById("modiEmple").addEventListener("click", modificarEmpleado,false);
 	document.getElementById("aceptarModiEmple").addEventListener("click", aceptarModificarEmpleado,false);
 

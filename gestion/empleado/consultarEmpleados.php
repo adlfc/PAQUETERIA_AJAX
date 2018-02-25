@@ -4,7 +4,7 @@ header('Content-type: application/json; charset=utf-8');
 $db = new mysqli('localhost', 'root', '', 'paqueteria');
 $db->set_charset("utf8");
 
-    $sql = "SELECT * FROM empleado";
+    $sql = "SELECT * FROM empleado where activo = 'Si'";
 
     $query = $db->query($sql);
 
