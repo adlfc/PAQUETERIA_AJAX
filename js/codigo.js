@@ -1360,8 +1360,6 @@ function verListaAduana()
 	document.getElementById("formModiQuejas").style.display = "none";
 	document.getElementById("formModiQuejas").reset();
 	
-	document.getElementById("listadoAduana").style.display = "none";
-	
 	document.getElementById("formAltaQuejas").style.display = "none";
 	
 	document.getElementById("formAltaQuejas").reset();
@@ -3081,7 +3079,6 @@ function inicio(){
 
 	document.getElementById("paqueteNoEntregado").addEventListener("click", mostrarListaPaquetesNo,false);
 	document.getElementById("paqueteEntregado").addEventListener("click", mostrarListaPaquetesSi,false);
-	//document.getElementById("btnListadoAduana").addEventListener("click", mostrarListaAduanas, false);
 
 	document.getElementById("aceptarModiArticulo").addEventListener("click", aceptarModificarArticulo,false);
 	document.getElementById("modiPaq").addEventListener("click", modificarPaquete,false);
@@ -3368,79 +3365,6 @@ function mostrarListaPaquetesSi(){
     }
     document.querySelector("#verPaquetesEntregados").appendChild(oTabla);
 }
-/*
-function mostrarListaAduanas(){
-	vaciarTablas(document.querySelector("#listadoAduana"));
-  	document.querySelector("#listadoAduana").style.display="block";
-
-  	var labelTitulo = document.createElement("label");
-  	labelTitulo.setAttribute("class", "titulo");
-  	labelTitulo.textContent="Listado aduanas";
-
-  	document.querySelector("#listadoAduana").appendChild(labelTitulo);
-
-    var lista = oPaqueteria.cogerTodasLasAduanas();
-    
-    var oTabla = document.createElement("table");
-
-    oTabla.setAttribute("class", "table table-striped table-responsive");
-
-    var oThead = oTabla.createTHead();
-    var oFila = oThead.insertRow(-1);
-    var oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "ID";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Artículo";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Declaracion";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Tasa";
-
-    var oTBody = oTabla.createTBody();
-
-    var oAduanas = oXML.getElementsByTagName("aduana");
-	
-	for (var i = 0; i < oAduanas.length; i++) {
-		oFila = oTBody.insertRow(-1);
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oAduanas[i].getElementsByTagName("idDeclaracion")[0].textContent;
-
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oAduanas[i].getElementsByTagName("articulo")[0].textContent;
-		
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oAduanas[i].getElementsByTagName("declaracion")[0].textContent;
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oAduanas[i].getElementsByTagName("tasa")[0].textContent;
-		
-		}	
-
-
-
-    for (i = 0; i < lista.length; i++) {
-    	
-    	if(lista[i].sActivo == true)
-    	{
-	        oFila = oTBody.insertRow(-1);
-	        
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].idDeclaracion));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sArticulo));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sDeclaracion));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].iTasa));
-		}
-    }
-    document.querySelector("#listadoAduana").appendChild(oTabla);
-}*/
 
 function mostrarListaQuejas(){
 
