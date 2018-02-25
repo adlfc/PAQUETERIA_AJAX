@@ -1,3 +1,16 @@
+$(document).ready(function(){
+          $("#aceptarBajaEmpl").click(function(){
+
+          		event.preventDefault();
+
+               	var oSelectEmpleado = $("#bajaEmp");
+         		var iIdEmpleado = oSelectEmpleado.val();
+         		var sDatos = JSON.stringify(iIdEmpleado);
+
+        $.post("gestion/empleado/bajaEmpleado.php", sDatos, respuestaBajaEmpleado, 'json');
+          }); 
+     });
+
 
 /* ********** MOSTRAR COMBO BAJA EMPLEADO ************************************************************************* */
 
@@ -22,7 +35,7 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
 
           option += "</option>";
 
-          option += '<input style="margin-top: 20px;" type="submit" id="aceptarBajaEmple" value="Aceptar" class="btn btn-primary"/>';
+          option += '<input style="margin-top: 20px;" type="submit" id="aceptarBajaEmpl" value="Aceptar" class="btn btn-primary"/>';
 
      	//document.querySelector("#formBajaEmple").innerHTML = option;
           
@@ -34,11 +47,7 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
 /* ********** BONTON ACEPTAR BAJA EMPLEADO ******************************************************************** */
 
 
-     $(document).ready(function(){
-          $("#aceptarBajaEmple").click(function(){
-               eliminarEmpleado();
-          }); 
-     });
+     
 
 
      function eliminarEmpleado() 
@@ -46,9 +55,9 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
 
          var oSelectEmpleado = $("#bajaEmp");
          var iIdEmpleado = oSelectEmpleado.val();
-         var sDatos = "datos=" + JSON.stringify(iIdEmpleado);
+         var sDatos = JSON.stringify(iIdEmpleado);
 
-        $.get("gestion/empleado/bajaEmpleado.php", sDatos, respuestaBajaEmpleado, 'json');
+        $.post("gestion/empleado/bajaEmpleado.php", sDatos, respuestaBajaEmpleado, 'json');
 
      }
 
@@ -57,7 +66,7 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
           if(respuesta == true)
           {
                alert("Empleado dado de baja");
-               $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json');
+               $.post('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json');
           }
 
           else

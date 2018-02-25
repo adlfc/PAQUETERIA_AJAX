@@ -2,7 +2,7 @@
 
 header('Content-type: application/json; charset=utf-8');
 
-$dato=$_GET['datos'];
+$dato=$_POST['datos'];
 $idEmpleado = json_decode($dato);
 
 $db = new mysqli('localhost', 'root', '', 'paqueteria');
@@ -13,7 +13,7 @@ $db->set_charset("utf8");
 
     $query = $db->query($sql);
 
-    if($query)
+    if($query->affected_rows > 0)
     {
     	$respuesta = true;
     }

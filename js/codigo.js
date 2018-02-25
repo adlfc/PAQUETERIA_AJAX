@@ -3184,7 +3184,7 @@ function mostrarListaEmpleados() {
     document.querySelector("#listadoEmpleados").appendChild(oTabla);
 }
 
-function loadXMLDoc(filename)
+/*function loadXMLDoc(filename)
     {
         if (window.XMLHttpRequest)
         {
@@ -3201,7 +3201,7 @@ function loadXMLDoc(filename)
         return xhttp.responseXML;
     }
 
-    var oXML2 = loadXMLDoc("datosArticulos.xml");
+    var oXML2 = loadXMLDoc("datosArticulos.xml");*/
 
 function mostrarListaArticulos() {
  	
