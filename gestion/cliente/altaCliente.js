@@ -1,31 +1,22 @@
-$("#divfrmAltaCliente").dialog({//suponiendo que lo pongamos así
-    autoOpen: true,  // Es el valor por defecto
-    close: function () {
-        $("#frmAltaCliente")[0].reset();
-    },
-    hide: "fold",
-    show: "fold",
-    height:"auto",
-    width:"auto",
-    resizable:false,
-    buttons: [{
-        text: "Aceptar",
-        click: aceptarAltaCliente
-    }]
-});
-
+window.addEventListener("load",inicio,false);
+function inicio(){
+	document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
+}
 function aceptarAltaCliente() {
+	
+		var oForm=document.getElementById("formAltaCliente");
+		$("input").removeClass("error");
     if(validarAltaCliente()){
-        idCliente = sIdCliente;
-        nombre = sNombre;
-        apellidos = sApellidos;
-		email = sEmail;
-        telefono = sTelefono;
-        direccion = sDireccion;
-		cod_post = sCodPost;
-		pais = sPais;
+        
+        nombre = oForm.nombre.value.trim();
+        apellidos = oForm.apellidos.value.trim();
+		email = oForm.email.value.trim();
+        telefono = oForm.telefono.value.trim();
+        direccion = oForm.calle.value.trim();
+		cod_post = oForm.codigopostal.value.trim();
+		pais = oForm.pais.value.trim();
         var cliente = {
-            id:idCliente,
+           
             nom:nombre,
             ape:apellidos,
             em:email,
@@ -39,7 +30,7 @@ function aceptarAltaCliente() {
         };
 
         var oCliente=JSON.stringify(cliente);
-        $.ajax({url:"php/cliente/altaCliente.php",
+        $.ajax({url:"gestion/cliente/altaCliente.php",
                 data:{datos:oCliente},
                 async:true,
                 dataType:'json',
@@ -73,7 +64,7 @@ function validarAltaCliente() {
     if(oExpReg.test(sNombre) == false){
         bValido = false;
         sError += "Nombre incorrecto<br>";
-       sNombre.addClass("error");
+       $("#nombre").addClass("error");
     }
 	
 
@@ -85,7 +76,7 @@ function validarAltaCliente() {
 	if (oExpReg.test(sApellidos) == false){
         bValido = false;
         sError += "Apellidos incorrectos<br>";
-        sApellidos.addClass("error");
+        $("#apellidos").addClass("error");
     }
 
    var sEmail = oForm.email.value.trim();
@@ -95,7 +86,7 @@ function validarAltaCliente() {
 	if (oExpReg.test(sEmail) == false){
         bValido = false;
         sError += "Email incorrecto<br>";
-        sEmail.addClass("error");
+        $("#email").addClass("error");
     }
 
    
@@ -107,7 +98,7 @@ function validarAltaCliente() {
 	if (oExpReg.test(sTelef) == false){
         bValido = false;
         sError += "Teléfono incorrecto<br>";
-       sTelef.addClass("error");
+       $("#telefono").addClass("error");
     }
 	
 	var sDireccion= oForm.calle.value.trim();
@@ -118,7 +109,7 @@ function validarAltaCliente() {
 	if (oExpReg.test(sDireccion) == false){
 	        bValido = false;
         sError += "Dirección incorrecta<br>";
-       sDireccion.addClass("error");
+       $("#calle").addClass("error");
     }
 	
 	var sCodPost = oForm.codigopostal.value.trim();
@@ -128,7 +119,7 @@ function validarAltaCliente() {
 	if (oExpReg.test(sCodPost) == false){
 	   bValido = false;
         sError += "Código postal incorrecto<br>";
-       sCodPost.addClass("error");
+       $("#codigopostal").addClass("error");
     }
 	
     var sPais= oForm.pais.value.trim();
@@ -139,33 +130,15 @@ function validarAltaCliente() {
 	if (oExpReg.test(sPais) == false){	
 	    bValido = false;
         sError += "País incorrecto<br>";
-       sPais.addClass("error");
+       $("#pais").addClass("error");
     }
 	
-	var sIdCliente=  oForm.idCli.value.trim();
-
-	var oExpReg = /^\d{1,}\w$/;
 	
-
-    if(oExpReg.test(sIdCliente) == false){
-        bValido = false;
-        sError += "Id incorrecto<br>";
-        sIdCliente.addClass("error");
-    }
-	
-    else {//comprobamos si existe el cliente antes de insertarlo
-        buscaCliente(sIdCliente);
-        if(bClienteEncontrado) {
-            bValido = false;
-            sError += "Cliente registrado con anterioridad<br>";
-            sIdCliente.addClass("error");
-        }
-    }
-
     if(!bValido){
-        $("#divMensajes").dialog("open");
+        /*$("#divMensajes").dialog("open");
         $("#divMensajes").dialog("option","title","Error validacion");
-        $("#pMensaje").html(sError);
+        $("#pMensaje").html(sError);*/
+		alert(sError);
     }
     return bValido;
 }
@@ -194,15 +167,15 @@ function tratarErrorCliente(oXHR,sStatus,sError){
 var bClienteEncontrado=false;
 var oAjaxvalidacionCliente = null;
 
-function buscaCliente(sIdCliente){
+/*function buscaCliente(sIdCliente){
 
     var sParametroGET = encodeURI("id="+sIdCliente);
 
-    var sURL = encodeURI("php/cliente/buscaCliente.php?");
+    var sURL = encodeURI("gestion/cliente/buscaCliente.php?");
 
     llamadaAjaxValidacionCliente(sURL,sParametroGET);
 
-}
+}*/
 
 function llamadaAjaxValidacionCliente(sURL,sParametroGET){
 

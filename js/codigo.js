@@ -1682,7 +1682,7 @@ function mostarUML()
 /*VALIDACIONES clientes*/
 
 
-function aceptarAltaCliente(oEvento){
+/* function aceptarAltaCliente(oEvento){
 	var oE = oEvento || window.event;
 	var bValido = true;
 	var oForm=document.getElementById("formAltaCliente");
@@ -1692,28 +1692,7 @@ function aceptarAltaCliente(oEvento){
 	var sActivo = true;
 	
 	 
-	var idCliente=  oForm.idCli.value.trim();
-
-	var oExpReg = /^\d{1,}\w$/;
 	
-	if (oExpReg.test(idCliente) == false){
-	
-		if(bValido == true){
-			bValido = false;		
-			
-			oForm.idCli.focus();		
-		}
-	
-		sErrores += "\nId incorrecto";
-		
-		
-		oForm.idCli.className = "form-control error";
-	
-	}
-	else {
-		
-		oForm.idCli.className = "form-control";	
-	}
 
 	//Campo nombre
 	var sNombre =oForm.nombre.value.trim();
@@ -1892,7 +1871,7 @@ function aceptarAltaCliente(oEvento){
 		oForm.pais.className = "form-control";
 	}
 	
-  if(idCliente == "" || sNombre =="" || sApellidos =="" || sEmail ==""  || sTelef=="" || sDireccion=="" || sCodPost=="" || sPais=="")
+  if(sNombre =="" || sApellidos =="" || sEmail ==""  || sTelef=="" || sDireccion=="" || sCodPost=="" || sPais=="")
     {
         sErrores +="Debe rellenar todos los campos";
     }
@@ -1910,7 +1889,7 @@ function aceptarAltaCliente(oEvento){
 	
 	else
 	{
-     var cliente= new Cliente(idCliente,sNombre,sApellidos,sEmail,sTelef,sDireccion,sCodPost,sPais,sActivo);
+     var cliente= new Cliente(sNombre,sApellidos,sEmail,sTelef,sDireccion,sCodPost,sPais,sActivo);
 	 sMensaje=oPaqueteria.altaCliente(cliente);
 	 oForm.reset();
 	}
@@ -1918,7 +1897,7 @@ function aceptarAltaCliente(oEvento){
 	
 	alert(sMensaje);
 
-}
+} */
 
 function aceptarBajaCliente()
 {
@@ -1986,7 +1965,7 @@ function comboEliminarCliente()
 
 //#######################################################################
 
-function aceptarAltaEmpleado(oEvento){
+/* function aceptarAltaEmpleado(oEvento){
 	var oE = oEvento || window.event;
 	var bValido = true;
 	var oForm=document.getElementById("formAltaEmpleados");
@@ -2127,7 +2106,7 @@ function aceptarAltaEmpleado(oEvento){
 	
 	
 	alert(sMensaje);
-}
+} */
 
 function aceptarEliminarEmpleado()
 {
@@ -3068,24 +3047,25 @@ function inicio(){
 
 
 	
-	document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
+	//document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
 	document.getElementById("aceptarEliminarCliente").addEventListener("click", aceptarBajaCliente,false);
 	document.getElementById("bajaCli").addEventListener("click", comboEliminarCliente,false);
 	document.getElementById("modiCli").addEventListener("click", modificarCliente,false);
 	document.getElementById("aceptarModiCli").addEventListener("click", aceptarModificarCliente,false);
 	
 
-	document.getElementById("aceptarAltaEmple").addEventListener("click", aceptarAltaEmpleado,false);
+	//document.getElementById("aceptarAltaEmple").addEventListener("click", aceptarAltaEmpleado,false);
 	//document.getElementById("bajaEmpl").addEventListener("click", comboEliminarEmpleado,false);
 	//document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
 	document.getElementById("modiEmple").addEventListener("click", modificarEmpleado,false);
 	document.getElementById("aceptarModiEmple").addEventListener("click", aceptarModificarEmpleado,false);
+	document.getElementById("listadoEmpl").addEventListener("click", mostrarListaEmpleados,false);
 
 	document.getElementById("aceptarAltaArticulo").addEventListener("click", aceptarAltaArticulo,false);
 	document.getElementById("aceptarBajaArticulo").addEventListener("click", aceptarEliminarArticulo,false);
 	document.getElementById("bajaArt").addEventListener("click", comboEliminarArticulo,false);
 	document.getElementById("modiArti").addEventListener("click",modificarArticulo,false);
-	
+	document.getElementById("btnListaArt").addEventListener("click",mostrarListaArticulos,false);
 
 	document.getElementById("aceptarAltaPaquete").addEventListener("click", aceptarAltaPaquete,false);
 	document.getElementById("aceptarBajaPaquete").addEventListener("click", aceptarEliminarPaquete,false);
@@ -3117,6 +3097,185 @@ function inicio(){
 
 
 //LISTADOS 
+
+
+function mostrarListaEmpleados() {
+  	
+  	vaciarTablas(document.querySelector("#listadoEmpleados"));
+  	document.querySelector("#listadoEmpleados").style.display="block";
+
+  	var labelTitulo = document.createElement("label");
+  	labelTitulo.setAttribute("class", "titulo");
+  	labelTitulo.textContent="Listado empleados";
+
+  	document.querySelector("#listadoEmpleados").appendChild(labelTitulo);
+
+    var lista = oPaqueteria.cogerTodosLosEmpleados();
+    
+    var oTabla = document.createElement("table");
+
+    oTabla.setAttribute("class", "table table-striped table-responsive");
+
+    var oThead = oTabla.createTHead();
+    var oFila = oThead.insertRow(-1);
+    var oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Nombre";
+
+    oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Apellidos";
+
+    oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Puesto Gestor";
+
+    oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Puesto Mánager";
+
+        oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Oficina";
+
+    var oTBody = oTabla.createTBody();
+
+    var oEmpleados = oXML.getElementsByTagName("empleado");
+	
+	for (var i = 0; i < oEmpleados.length; i++) {
+		oFila = oTBody.insertRow(-1);
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oEmpleados[i].getElementsByTagName("nombre")[0].textContent;
+
+		
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oEmpleados[i].getElementsByTagName("apellidos")[0].textContent;
+		
+		
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oEmpleados[i].getElementsByTagName("gestor")[0].textContent;
+		
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oEmpleados[i].getElementsByTagName("manager")[0].textContent;
+		
+
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oEmpleados[i].getElementsByTagName("oficina")[0].textContent;
+		
+		}	
+
+
+
+    for (i = 0; i < lista.length; i++) {
+        
+    	if(lista[i].sActivo == true)
+    	{
+	        oFila = oTBody.insertRow(-1);
+	        
+	        oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sNombre));
+	        oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sApellidos));
+			oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sGestor));
+	        oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sManager));
+		
+			oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sOficina));
+		}
+
+    }
+    document.querySelector("#listadoEmpleados").appendChild(oTabla);
+}
+
+function loadXMLDoc(filename)
+    {
+        if (window.XMLHttpRequest)
+        {
+            xhttp=new XMLHttpRequest();
+        }
+        else // code for IE5 and IE6
+        {
+            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET",filename,false);
+
+        xhttp.send();
+
+        return xhttp.responseXML;
+    }
+
+    var oXML2 = loadXMLDoc("datosArticulos.xml");
+
+function mostrarListaArticulos() {
+ 	
+	vaciarTablas(document.querySelector("#listadoArtic"));
+  	document.querySelector("#listadoArtic").style.display="block";
+
+  	var labelTitulo = document.createElement("label");
+  	labelTitulo.setAttribute("class", "titulo");
+  	labelTitulo.textContent="Listado artículos";
+
+  	document.querySelector("#listadoArtic").appendChild(labelTitulo);
+
+    var lista = oPaqueteria.cogerTodosLosArticulos();
+    
+    var oTabla = document.createElement("table");
+
+    oTabla.setAttribute("class", "table table-striped table-responsive");
+
+    var oThead = oTabla.createTHead();
+    var oFila = oThead.insertRow(-1);
+    var oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Descripción";
+
+    oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Peso";
+
+    oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Valor";
+
+    oCelda = oFila.insertCell(-1);
+    oCelda.textContent = "Comercial";
+
+    var oTBody = oTabla.createTBody();
+
+    var oArticulos = oXML2.getElementsByTagName("articulo");
+
+	
+	for (var i = 0; i < oArticulos.length; i++) {
+
+		oFila = oTBody.insertRow(-1);
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oArticulos[i].getElementsByTagName("descripcion")[0].textContent;
+
+		
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oArticulos[i].getElementsByTagName("peso")[0].textContent;
+		
+		
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oArticulos[i].getElementsByTagName("valor")[0].textContent;
+		
+		oCelda = oFila.insertCell(-1);
+		oCelda.textContent = oArticulos[i].getElementsByTagName("comercial")[0].textContent;	
+		}		
+	
+    for (i = 0; i < lista.length; i++) {
+        
+    	if(lista[i].sActivo == true)	
+    	{	
+	        oFila = oTBody.insertRow(-1);
+	        
+	        oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sDescripcion));
+	        oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].doPeso));
+			oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].doValor));
+	        oCelda = oFila.insertCell(-1);
+	        oCelda.appendChild(document.createTextNode(lista[i].sComercial));
+    	}
+    }
+    
+    document.querySelector("#listadoArtic").appendChild(oTabla);
+}
 
 //listado paquetes no entregados
 

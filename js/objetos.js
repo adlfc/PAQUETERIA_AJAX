@@ -25,8 +25,8 @@ function Persona(idPersona){
 
 // ###############################  Objeto Cliente  ############################### \\
 
-function Cliente(sIdCliente, sNombre, sApellidos, sEmail, sTelefono, sDireccion, sCodPost, sPais, sActivo){
-    this.sIdCliente = sIdCliente;
+function Cliente(sNombre, sApellidos, sEmail, sTelefono, sDireccion, sCodPost, sPais, sActivo){
+   
     this.sNombre = sNombre;
     this.sApellidos = sApellidos;
     this.sEmail = sEmail;
