@@ -3085,7 +3085,7 @@ function inicio(){
 	document.getElementById("aceptarBajaArticulo").addEventListener("click", aceptarEliminarArticulo,false);
 	document.getElementById("bajaArt").addEventListener("click", comboEliminarArticulo,false);
 	document.getElementById("modiArti").addEventListener("click",modificarArticulo,false);
-	document.getElementById("btnListaArt").addEventListener("click",mostrarListaArticulos,false);
+	
 
 	document.getElementById("aceptarAltaPaquete").addEventListener("click", aceptarAltaPaquete,false);
 	document.getElementById("aceptarBajaPaquete").addEventListener("click", aceptarEliminarPaquete,false);
@@ -3117,80 +3117,6 @@ function inicio(){
 
 
 //LISTADOS 
-
-function mostrarListaArticulos() {
- 	
-	vaciarTablas(document.querySelector("#listadoArtic"));
-  	document.querySelector("#listadoArtic").style.display="block";
-
-  	var labelTitulo = document.createElement("label");
-  	labelTitulo.setAttribute("class", "titulo");
-  	labelTitulo.textContent="Listado artículos";
-
-  	document.querySelector("#listadoArtic").appendChild(labelTitulo);
-
-    var lista = oPaqueteria.cogerTodosLosArticulos();
-    
-    var oTabla = document.createElement("table");
-
-    oTabla.setAttribute("class", "table table-striped table-responsive");
-
-    var oThead = oTabla.createTHead();
-    var oFila = oThead.insertRow(-1);
-    var oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Descripción";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Peso";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Valor";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Comercial";
-
-    var oTBody = oTabla.createTBody();
-
-    var oArticulos = oXML2.getElementsByTagName("articulo");
-
-	
-	for (var i = 0; i < oArticulos.length; i++) {
-
-		oFila = oTBody.insertRow(-1);
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oArticulos[i].getElementsByTagName("descripcion")[0].textContent;
-
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oArticulos[i].getElementsByTagName("peso")[0].textContent;
-		
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oArticulos[i].getElementsByTagName("valor")[0].textContent;
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oArticulos[i].getElementsByTagName("comercial")[0].textContent;	
-		}		
-	
-    for (i = 0; i < lista.length; i++) {
-        
-    	if(lista[i].sActivo == true)	
-    	{	
-	        oFila = oTBody.insertRow(-1);
-	        
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sDescripcion));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].doPeso));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].doValor));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sComercial));
-    	}
-    }
-    
-    document.querySelector("#listadoArtic").appendChild(oTabla);
-}
 
 //listado paquetes no entregados
 

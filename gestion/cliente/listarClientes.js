@@ -1,3 +1,4 @@
+   $("#listadoCli").click(function(){
     vaciarTablas(document.querySelector("#listadoClientes"));
 	
 
@@ -20,19 +21,18 @@
             	sTabla += '<tbody>';
      			
      			for (var i = 0; i < oClientes.length; i++) {
-     				
-     				sTabla += '<tr>';
-            		sTabla += '<th>'+oClientes[i].nombre+'</th><th>'+oClientes[i].apellidos+'</th>';
-            		sTabla += '<th>'+oClientes[i].email+'</th><th>'+oClientes[i].telefono+'</th>';
-            		sTabla += '<th>'+oClientes[i].direccion+'</th><th>'+oClientes[i].cod_postal+'</th>';
-            		sTabla += '<th>'+oClientes[i].pais+'</th></tr>';
-            		
+     				if(oClientes[i].activo=="Si")
+                    {
+         				sTabla += '<tr>';
+                		sTabla += '<th>'+oClientes[i].nombre+'</th><th>'+oClientes[i].apellidos+'</th>';
+                		sTabla += '<th>'+oClientes[i].email+'</th><th>'+oClientes[i].telefono+'</th>';
+                		sTabla += '<th>'+oClientes[i].direccion+'</th><th>'+oClientes[i].cod_postal+'</th>';
+                		sTabla += '<th>'+oClientes[i].pais+'</th></tr>';
+            		}
      			}
      			sTabla += '</tbody>';
      			$("#listadoClientes").append(sTabla);
             }
-
-
 
 function vaciarTablas(objetoParent)
 {
@@ -41,3 +41,4 @@ function vaciarTablas(objetoParent)
         objetoParent.removeChild(objetoParent.firstElementChild);
     }
 }
+});
