@@ -3059,13 +3059,13 @@ function inicio(){
 	//document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
 	document.getElementById("modiEmple").addEventListener("click", modificarEmpleado,false);
 	document.getElementById("aceptarModiEmple").addEventListener("click", aceptarModificarEmpleado,false);
-	document.getElementById("listadoEmpl").addEventListener("click", mostrarListaEmpleados,false);
+	
 
 	document.getElementById("aceptarAltaArticulo").addEventListener("click", aceptarAltaArticulo,false);
 	document.getElementById("aceptarBajaArticulo").addEventListener("click", aceptarEliminarArticulo,false);
 	document.getElementById("bajaArt").addEventListener("click", comboEliminarArticulo,false);
 	document.getElementById("modiArti").addEventListener("click",modificarArticulo,false);
-	document.getElementById("btnListaArt").addEventListener("click",mostrarListaArticulos,false);
+	
 
 	document.getElementById("aceptarAltaPaquete").addEventListener("click", aceptarAltaPaquete,false);
 	document.getElementById("aceptarBajaPaquete").addEventListener("click", aceptarEliminarPaquete,false);
@@ -3081,7 +3081,7 @@ function inicio(){
 
 	document.getElementById("paqueteNoEntregado").addEventListener("click", mostrarListaPaquetesNo,false);
 	document.getElementById("paqueteEntregado").addEventListener("click", mostrarListaPaquetesSi,false);
-	document.getElementById("btnListadoAduana").addEventListener("click", mostrarListaAduanas, false);
+	//document.getElementById("btnListadoAduana").addEventListener("click", mostrarListaAduanas, false);
 
 	document.getElementById("aceptarModiArticulo").addEventListener("click", aceptarModificarArticulo,false);
 	document.getElementById("modiPaq").addEventListener("click", modificarPaquete,false);
@@ -3098,6 +3098,7 @@ function inicio(){
 
 //LISTADOS 
 
+<<<<<<< HEAD
 
 function mostrarListaEmpleados() {
   	
@@ -3277,6 +3278,8 @@ function mostrarListaArticulos() {
     document.querySelector("#listadoArtic").appendChild(oTabla);
 }
 
+=======
+>>>>>>> 37d6cca36e6c5958ae4fcee708f99a5886d8671c
 //listado paquetes no entregados
 
 function mostrarListaPaquetesNo(){
@@ -3545,7 +3548,7 @@ function mostrarListaPaquetesSi(){
     }
     document.querySelector("#verPaquetesEntregados").appendChild(oTabla);
 }
-
+/*
 function mostrarListaAduanas(){
 	vaciarTablas(document.querySelector("#listadoAduana"));
   	document.querySelector("#listadoAduana").style.display="block";
@@ -3617,7 +3620,7 @@ function mostrarListaAduanas(){
 		}
     }
     document.querySelector("#listadoAduana").appendChild(oTabla);
-}
+}*/
 
 function mostrarListaQuejas(){
 
