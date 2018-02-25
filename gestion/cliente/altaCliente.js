@@ -148,13 +148,14 @@ function tratarRespuestaCliente(oArrayRespuesta,sStatus,oXHR)
     $("#divMensajes").dialog("open");
 
     if (oArrayRespuesta[0] == true){
-        $("#divMensajes").dialog("option","title","Error");
-        $("#pMensaje").text(oArrayRespuesta[1]);
+        /*$("#divMensajes").dialog("option","title","Error");
+        $("#pMensaje").text(oArrayRespuesta[1]);*/alert("Cliente registrado previamente");
     } else {
-        $('#divFrmAltaCliente').dialog("close");
+        /* $('#divFrmAltaCliente').dialog("close");
         $("#divMensajes").dialog("option","title","Alta OK");
         $("#pMensaje").text(oArrayRespuesta[1]);
-        $("#divfrmAltaCliente").dialog("close");
+        $("#divfrmAltaCliente").dialog("close"); */
+		alert("Cliente dado de alta")
     }
 }
 
