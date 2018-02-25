@@ -1,3 +1,6 @@
+  
+   $("#listadoEmpl").click(function(){
+
     vaciarTablas(document.querySelector("#listadoEmpleados"));
 	
 
@@ -41,3 +44,4 @@ function vaciarTablas(objetoParent)
         objetoParent.removeChild(objetoParent.firstElementChild);
     }
 }
+});
