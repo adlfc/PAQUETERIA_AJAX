@@ -35,8 +35,6 @@
      			$("#listadoEmpleados").append(sTabla);
             }
 
-
-
 function vaciarTablas(objetoParent)
 {
     while(objetoParent.children.length != 0)
