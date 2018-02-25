@@ -3048,8 +3048,8 @@ function inicio(){
 
 	
 	//document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
-	document.getElementById("aceptarEliminarCliente").addEventListener("click", aceptarBajaCliente,false);
-	document.getElementById("bajaCli").addEventListener("click", comboEliminarCliente,false);
+	//document.getElementById("aceptarEliminarCliente").addEventListener("click", aceptarBajaCliente,false);
+	//document.getElementById("bajaCli").addEventListener("click", comboEliminarCliente,false);
 	document.getElementById("modiCli").addEventListener("click", modificarCliente,false);
 	document.getElementById("aceptarModiCli").addEventListener("click", aceptarModificarCliente,false);
 	
