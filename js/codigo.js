@@ -3098,6 +3098,8 @@ function inicio(){
 
 //LISTADOS 
 
+
+
 //listado paquetes no entregados
 
 function mostrarListaPaquetesNo(){
