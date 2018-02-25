@@ -3077,8 +3077,8 @@ function inicio(){
     document.getElementById("aceptarBajaQueja").addEventListener("click", aceptarEliminarQueja,false);
     document.getElementById("btnBajaQueja").addEventListener("click", comboEliminarQueja,false);
 
-	document.getElementById("paqueteNoEntregado").addEventListener("click", mostrarListaPaquetesNo,false);
-	document.getElementById("paqueteEntregado").addEventListener("click", mostrarListaPaquetesSi,false);
+	//document.getElementById("paqueteNoEntregado").addEventListener("click", mostrarListaPaquetesNo,false);
+	//document.getElementById("paqueteEntregado").addEventListener("click", mostrarListaPaquetesSi,false);
 
 	document.getElementById("aceptarModiArticulo").addEventListener("click", aceptarModificarArticulo,false);
 	document.getElementById("modiPaq").addEventListener("click", modificarPaquete,false);
@@ -3087,7 +3087,7 @@ function inicio(){
 	document.getElementById("aceptarModificarAduana").addEventListener("click", aceptarModificarAduana,false);
 	document.getElementById("modiQueja").addEventListener("click", modificarQueja,false);
 	document.getElementById("aceptarModificarQueja").addEventListener("click", aceptarModificarQueja,false);
-	document.getElementById("listadoQueja").addEventListener("click",mostrarListaQuejas,false);
+	//document.getElementById("listadoQueja").addEventListener("click",mostrarListaQuejas,false);
 
 }
 
@@ -3365,7 +3365,7 @@ function mostrarListaPaquetesSi(){
     }
     document.querySelector("#verPaquetesEntregados").appendChild(oTabla);
 }
-
+/*
 function mostrarListaQuejas(){
 
 	vaciarTablas(document.querySelector("#listaQueja"));
@@ -3439,6 +3439,7 @@ function mostrarListaQuejas(){
     }
     document.querySelector("#listaQueja").appendChild(oTabla);
 }
+*/
 
 function vaciarTablas(objetoParent)
 {
