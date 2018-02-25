@@ -3080,7 +3080,6 @@ function inicio(){
 	document.getElementById("aceptarBajaEmple").addEventListener("click", aceptarEliminarEmpleado,false);
 	document.getElementById("modiEmple").addEventListener("click", modificarEmpleado,false);
 	document.getElementById("aceptarModiEmple").addEventListener("click", aceptarModificarEmpleado,false);
-	document.getElementById("listadoEmpl").addEventListener("click", mostrarListaEmpleados,false);
 
 	document.getElementById("aceptarAltaArticulo").addEventListener("click", aceptarAltaArticulo,false);
 	document.getElementById("aceptarBajaArticulo").addEventListener("click", aceptarEliminarArticulo,false);
@@ -3118,111 +3117,6 @@ function inicio(){
 
 
 //LISTADOS 
-
-
-function mostrarListaEmpleados() {
-  	
-  	vaciarTablas(document.querySelector("#listadoEmpleados"));
-  	document.querySelector("#listadoEmpleados").style.display="block";
-
-  	var labelTitulo = document.createElement("label");
-  	labelTitulo.setAttribute("class", "titulo");
-  	labelTitulo.textContent="Listado empleados";
-
-  	document.querySelector("#listadoEmpleados").appendChild(labelTitulo);
-
-    var lista = oPaqueteria.cogerTodosLosEmpleados();
-    
-    var oTabla = document.createElement("table");
-
-    oTabla.setAttribute("class", "table table-striped table-responsive");
-
-    var oThead = oTabla.createTHead();
-    var oFila = oThead.insertRow(-1);
-    var oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Nombre";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Apellidos";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Puesto Gestor";
-
-    oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Puesto Mánager";
-
-        oCelda = oFila.insertCell(-1);
-    oCelda.textContent = "Oficina";
-
-    var oTBody = oTabla.createTBody();
-
-    var oEmpleados = oXML.getElementsByTagName("empleado");
-	
-	for (var i = 0; i < oEmpleados.length; i++) {
-		oFila = oTBody.insertRow(-1);
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oEmpleados[i].getElementsByTagName("nombre")[0].textContent;
-
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oEmpleados[i].getElementsByTagName("apellidos")[0].textContent;
-		
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oEmpleados[i].getElementsByTagName("gestor")[0].textContent;
-		
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oEmpleados[i].getElementsByTagName("manager")[0].textContent;
-		
-
-		oCelda = oFila.insertCell(-1);
-		oCelda.textContent = oEmpleados[i].getElementsByTagName("oficina")[0].textContent;
-		
-		}	
-
-
-
-    for (i = 0; i < lista.length; i++) {
-        
-    	if(lista[i].sActivo == true)
-    	{
-	        oFila = oTBody.insertRow(-1);
-	        
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sNombre));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sApellidos));
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sGestor));
-	        oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sManager));
-		
-			oCelda = oFila.insertCell(-1);
-	        oCelda.appendChild(document.createTextNode(lista[i].sOficina));
-		}
-
-    }
-    document.querySelector("#listadoEmpleados").appendChild(oTabla);
-}
-
-function loadXMLDoc(filename)
-    {
-        if (window.XMLHttpRequest)
-        {
-            xhttp=new XMLHttpRequest();
-        }
-        else // code for IE5 and IE6
-        {
-            xhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xhttp.open("GET",filename,false);
-
-        xhttp.send();
-
-        return xhttp.responseXML;
-    }
-
-    var oXML2 = loadXMLDoc("datosArticulos.xml");
 
 function mostrarListaArticulos() {
  	
