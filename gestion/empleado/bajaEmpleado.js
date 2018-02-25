@@ -1,15 +1,7 @@
-$(document).ready(function(){
-          $("#aceptarBajaEmpl").click(function(){
 
-          		event.preventDefault();
 
-               	var oSelectEmpleado = $("#bajaEmp");
-         		var iIdEmpleado = oSelectEmpleado.val();
-         		var sDatos = JSON.stringify(iIdEmpleado);
-
-        $.post("gestion/empleado/bajaEmpleado.php", sDatos, respuestaBajaEmpleado, 'json');
-          }); 
-     });
+$(document).ready(function()
+{
 
 
 /* ********** MOSTRAR COMBO BAJA EMPLEADO ************************************************************************* */
@@ -35,11 +27,18 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
 
           option += "</option>";
 
-          option += '<input style="margin-top: 20px;" type="submit" id="aceptarBajaEmpl" value="Aceptar" class="btn btn-primary"/>';
+          option += '<input style="margin-top: 20px;" type="button" id="aceptarBajaEmpl" value="Aceptar" class="btn btn-primary"/>';
 
      	//document.querySelector("#formBajaEmple").innerHTML = option;
           
           $("#formBajaEmple").append(option);
+
+          $("#aceptarBajaEmpl").click(function(){
+
+              //event.preventDefault();
+                eliminarEmpleado();
+
+          });
 
      }
 
@@ -55,10 +54,9 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
 
          var oSelectEmpleado = $("#bajaEmp");
          var iIdEmpleado = oSelectEmpleado.val();
-         var sDatos = JSON.stringify(iIdEmpleado);
-
+         var sDatos = {empleado:iIdEmpleado};
         $.post("gestion/empleado/bajaEmpleado.php", sDatos, respuestaBajaEmpleado, 'json');
-
+      
      }
 
      function respuestaBajaEmpleado(respuesta, sStatus, oAjax)
@@ -73,5 +71,7 @@ $.get('gestion/empleado/consultarEmpleados.php', null, mostrarEmpleados, 'json')
           {
                alert("Error al intentar dar de baja al empleado");
           }
+
      }
 
+});

@@ -1,18 +1,6 @@
 $(document).ready(function(){
-          $("#aceptarBajaCli").click(function(){
-
-          		event.preventDefault();
-
-               	var oSelectEmpleado = $("#bajaCli");
-         		var iIdEmpleado = oSelectEmpleado.val();
-
-            var oCliente = new Cliente(iIdEmpleado,null,null,null,null,null,null,null,null);
-
-         		var sDatos = "datos" + JSON.stringify(oCliente);
-
-        $.post("bajaCliente.php", sDatos, respuestaBajaCliente, 'json');
-          }); 
-     });
+          
+     
 
 
 /* ********** MOSTRAR COMBO BAJA EMPLEADO ************************************************************************* */
@@ -44,6 +32,12 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
           
           $("#formBajaCliente").append(option);
 
+          $("#aceptarBajaCli").click(function(){
+
+            eliminarCliente();
+             
+          }); 
+
      }
 
 
@@ -53,23 +47,23 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
      
 
 
-     /*function eliminarEmpleado() 
+     function eliminarCliente() 
      {
 
-         var oSelectEmpleado = $("#bajaEmp");
-         var iIdEmpleado = oSelectEmpleado.val();
-         var sDatos = JSON.stringify(iIdEmpleado);
+         var oSelectCliente = $("#bajaCli");
+         var iIdCliente = oSelectCliente.val();
+         var sDatos = {cliente:iIdCliente};
 
-        $.post("gestion/empleado/bajaEmpleado.php", sDatos, respuestaBajaCliente, 'json');
+        $.post("gestion/cliente/bajaCliente.php", sDatos, respuestaBajaCliente, 'json');
 
-     }*/
+     }
 
      function respuestaBajaCliente(respuesta, sStatus, oAjax)
      {
           if(respuesta == true)
           {
                alert("Cliente dado de baja");
-               $.post('gestion/empleado/consultarClientes.php', null, mostrarCientes, 'json');
+               $.post('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
           }
 
           else
@@ -78,3 +72,4 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
           }
      }
 
+});

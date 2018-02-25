@@ -2,8 +2,7 @@
 
 header('Content-type: application/json; charset=utf-8');
 
-$dato=$_POST['datos'];
-$idEmpleado = json_decode($dato);
+$idEmpleado = $_POST['empleado'];
 
 $db = new mysqli('localhost', 'root', '', 'paqueteria');
 $db->set_charset("utf8");
@@ -11,9 +10,7 @@ $db->set_charset("utf8");
 
     $sql = "UPDATE `empleado` SET `activo`='No' where id='".$idEmpleado."'";
 
-    $query = $db->query($sql);
-
-    if($query->affected_rows > 0)
+    if($db->query($sql))
     {
     	$respuesta = true;
     }
@@ -23,6 +20,6 @@ $db->set_charset("utf8");
     	$respuesta = false;
     }
 
-    //echo json_encode($respuesta, JSON_UNESCAPED_UNICODE);
     echo $respuesta;
+        
 ?>
