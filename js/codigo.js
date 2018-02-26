@@ -3557,7 +3557,7 @@ function rellenaComboClientes(combo){
 	}
 }
 
-function rellenaComboEmpleados(combo){
+/*function rellenaComboEmpleados(combo){
 	var oSelect = document.getElementById(combo);
 	var cont=0;
 	while(oSelect.childNodes.length>0)
@@ -3578,7 +3578,7 @@ function rellenaComboEmpleados(combo){
 		oOption.appendChild(oTextOption);
 		oSelect.appendChild(oOption);
 	}
-}
+}*/
 
 function rellenaComboArticulos(combo){
 	var oSelect = document.getElementById(combo);
