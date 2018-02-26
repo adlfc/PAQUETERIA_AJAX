@@ -1,7 +1,6 @@
 
 
-$(document).ready(function()
-{
+$("#bajaEmpl").click(function(){
 
 
 /* ********** MOSTRAR COMBO BAJA EMPLEADO ************************************************************************* */
