@@ -11,7 +11,6 @@ $.get('gestion/articulo/consultarArticulos.php', null, mostrarArticulos, 'json')
 
      function mostrarArticulos(oArticulos, sStatus, oXHR)
      {
-          console.log(oArticulos.length);
 
           $("#formBajArticulo").children().remove();
 
@@ -23,7 +22,7 @@ $.get('gestion/articulo/consultarArticulos.php', null, mostrarArticulos, 'json')
 
      	for(var i=0;i<oArticulos.length;i++)
      	{
-     		option += "<option value='"+oArticulos[i].id+"'>"+oArticulos[i].descripcion+"</option>";
+     		option += "<option value='"+oArticulos[i].id+"'>Artículo "+oArticulos[i].id+", "+oArticulos[i].descripcion+"</option>";
      	}
 
           option += "</option>";
@@ -64,13 +63,13 @@ $.get('gestion/articulo/consultarArticulos.php', null, mostrarArticulos, 'json')
      {
           if(respuesta == true)
           {
-               alert("Empleado dado de baja");
+               alert("Artículo dado de baja");
                $.post('gestion/articulo/consultarArticulos.php', null, mostrarArticulos, 'json');
           }
 
           else
           {
-               alert("Error al intentar dar de baja al empleado");
+               alert("Error al intentar dar de baja al artículo");
           }
 
      }

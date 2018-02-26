@@ -2,13 +2,13 @@
 
 header('Content-type: application/json; charset=utf-8');
 
-$idCliente = $_POST['cliente'];
+$idPaquete = $_POST['paquete'];
 
 $db = new mysqli('localhost', 'root', '', 'paqueteria');
 $db->set_charset("utf8");
 
 
-    $sql = "UPDATE `cliente` SET `activo`='No' where id='".$idCliente."'";
+    $sql = "UPDATE `paquete` SET `activo`='No' where id='".$idPaquete."'";
 
     if($db->query($sql))
     {
@@ -21,5 +21,5 @@ $db->set_charset("utf8");
     }
 
     echo $respuesta;
-    //echo $_POST['cliente'];
+        
 ?>

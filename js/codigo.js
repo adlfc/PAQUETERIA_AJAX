@@ -2311,7 +2311,7 @@ function aceptarAltaArticulo(oEvento){
 
 }
 
-function aceptarEliminarArticulo()
+/*function aceptarEliminarArticulo()
 {
 	var oForm = document.getElementById("formBajArticulo");
     var bValido = true;
@@ -2373,7 +2373,7 @@ function comboEliminarArticulo()
 	    }
 
     }
-}
+}*/
 
 //#######################################################################
 
@@ -2577,7 +2577,7 @@ function aceptarAltaPaquete(oEvento){
 
 }
 
-function aceptarEliminarPaquete()
+/*function aceptarEliminarPaquete()
 {
 	var oForm = document.getElementById("formBajaPaquete");
     var bValido = true;
@@ -2639,7 +2639,7 @@ function comboEliminarPaquete()
 	    }
 
     }
-}
+}*/
 
 //#######################################################################
 
@@ -2788,7 +2788,7 @@ function aceptarAltaAduana(oEvento){
 
 }
 
-function aceptarEliminarAduana()
+/*function aceptarEliminarAduana()
 {
 	var oForm = document.getElementById("formBajaAduana");
     var bValido = true;
@@ -2850,7 +2850,7 @@ function comboEliminarAduana()
 	    }
 
     }
-}
+}*/
 
 //#######################################################################
 
@@ -2976,7 +2976,7 @@ function aceptarAltaQueja(oEvento){
 
 }
 
-function aceptarEliminarQueja()
+/*function aceptarEliminarQueja()
 {
 	var oForm = document.getElementById("formBajaQueja");
     var bValido = true;
@@ -3038,7 +3038,7 @@ function comboEliminarQueja()
 	    }
 
     }
-}
+}*/
 
 function inicio(){
 	
@@ -3060,22 +3060,22 @@ function inicio(){
 	
 
 	document.getElementById("aceptarAltaArticulo").addEventListener("click", aceptarAltaArticulo,false);
-	document.getElementById("aceptarBajaArticulo").addEventListener("click", aceptarEliminarArticulo,false);
-	document.getElementById("bajaArt").addEventListener("click", comboEliminarArticulo,false);
+	//document.getElementById("aceptarBajaArticulo").addEventListener("click", aceptarEliminarArticulo,false);
+	//document.getElementById("bajaArt").addEventListener("click", comboEliminarArticulo,false);
 	document.getElementById("modiArti").addEventListener("click",modificarArticulo,false);
 	
 
 	document.getElementById("aceptarAltaPaquete").addEventListener("click", aceptarAltaPaquete,false);
-	document.getElementById("aceptarBajaPaquete").addEventListener("click", aceptarEliminarPaquete,false);
-	document.getElementById("btnBajaPaquete").addEventListener("click", comboEliminarPaquete,false);
+	//document.getElementById("aceptarBajaPaquete").addEventListener("click", aceptarEliminarPaquete,false);
+	//document.getElementById("btnBajaPaquete").addEventListener("click", comboEliminarPaquete,false);
 
 	document.getElementById("aceptarAltaAduana").addEventListener("click", aceptarAltaAduana,false);
-	document.getElementById("aceptarBajaAduana").addEventListener("click", aceptarEliminarAduana,false);
-	document.getElementById("btnBajaAduana").addEventListener("click", comboEliminarAduana,false);
+	//document.getElementById("aceptarBajaAduana").addEventListener("click", aceptarEliminarAduana,false);
+	//document.getElementById("btnBajaAduana").addEventListener("click", comboEliminarAduana,false);
 
     document.getElementById("aceptarAltaQueja").addEventListener("click", aceptarAltaQueja,false);
-    document.getElementById("aceptarBajaQueja").addEventListener("click", aceptarEliminarQueja,false);
-    document.getElementById("btnBajaQueja").addEventListener("click", comboEliminarQueja,false);
+    //document.getElementById("aceptarBajaQueja").addEventListener("click", aceptarEliminarQueja,false);
+    //document.getElementById("btnBajaQueja").addEventListener("click", comboEliminarQueja,false);
 
 	//document.getElementById("paqueteNoEntregado").addEventListener("click", mostrarListaPaquetesNo,false);
 	//document.getElementById("paqueteEntregado").addEventListener("click", mostrarListaPaquetesSi,false);

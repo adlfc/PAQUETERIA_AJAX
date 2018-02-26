@@ -26,7 +26,7 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
 
           option += "</option>";
 
-          option += '<input style="margin-top: 20px;" type="submit" id="aceptarBajaCli" value="Aceptar" class="btn btn-primary"/>';
+          option += '<input style="margin-top: 20px;" type="button" id="aceptarBajaCli" value="Aceptar" class="btn btn-primary"/>';
 
      	//document.querySelector("#formBajaEmple").innerHTML = option;
           
@@ -60,6 +60,7 @@ $.get('gestion/cliente/consultarClientes.php', null, mostrarCientes, 'json');
      function respuestaBajaCliente(respuesta, sStatus, oAjax)
      {
           console.log("Hola");
+          console.log(respuesta);
           if(respuesta == true)
           {
                alert("Cliente dado de baja");
