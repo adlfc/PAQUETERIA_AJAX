@@ -12,7 +12,7 @@ $bd = "paqueteria";
 
 $datos=$_REQUEST['datos'];
 
-$oArticulo = json_decode($datos);
+$oPaquete = json_decode($datos);
 
 
 // Abrir conexion con la BD
@@ -29,8 +29,8 @@ $conexion ->set_charset("utf8");//asi es el caracter utf8 si es msqli
 
 
 
-$sql1 = "insert into articulo (id,descripcion,peso,valor,comercial,id_paquete)
-values ('".$oArticulo->id."','".$oArticulo->des."','".$oArticulo->pe."','".$oArticulo->val."','".$oArticulo->com."','".$oArticulo->paq."')";
+$sql1 = "insert into paquete (id,id_cliente,tarifa,fecha_entrega,volumen,peso,valor,urgente,entregado,publica,internacional,asegurado)
+values ('".$oPaquete->id."','".$oPaquete->cli."','".$oPaquete->tar."','".$oPaquete->fe."','".$oPaquete->vol."','".$oPaquete->pe."','".$oPaquete->val."','".$oPaquete->ur."','".$oPaquete->ent."','".$oPaquete->ad."','".$oPaquete->inter."','".$oPaquete->ase."')";
 
 	 if($conexion->query($sql1))
 	 {
