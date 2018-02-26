@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // Va a devolver una respuesta JSON que no se debe cachear 
 header('Content-Type: application/json');
@@ -12,7 +12,7 @@ $bd = "paqueteria";
 
 $datos=$_REQUEST['datos'];
 
-$oCliente = json_decode($datos);
+$oEmpleado = json_decode($datos);
 
 
 // Abrir conexion con la BD
@@ -31,34 +31,23 @@ $conexion ->set_charset("utf8");//asi es el caracter utf8 si es msqli
 
 //si existe damos error
 if($num > 0){
-	$mensaje = "Propietario registrado anteriormente";
+	$mensaje = "Empleado registrado anteriormente";
 	$error = TRUE;  
 }
 else{*/
 
 
 
-$sql1 = "insert into cliente (id,nombre,apellidos,email,telefono,direccion,cod_postal,pais)
-values ('".$oCliente->id."','".$oCliente->nom."','".$oCliente->ape."','".$oCliente->em."','".$oCliente->telef."','".$oCliente->dire."','".$oCliente->cp."','".$oCliente->pa."')";
-
-	 if($conexion->query($sql1))
-	 {
-	        //$mensaje = "Alta de cliente correcta";
-		    //$error = FALSE;
- 		$respuesta = true;
-    } 
-    else 
-    {
-	    //$mensaje = "Error: ".$sql1." ".$conn->error;
-	    //$error = TRUE;
-	    $respuesta = false;
-	}
-//}	 
-
-//$respuesta = array($error,$mensaje);
+$sql1 = "insert into empleado(id,nombre,apellidos,gestor,manager,oficina)
+values ('".$oEmpleado->id."','".$oEmpleado->nom."','".$oEmpleado->ape."','".$oEmpleado->ges."','".$oEmpleado->mana."','".$oEmpleado->ofi."')";
+	 if($conexion->query($sql1) === TRUE){
+	        $respuesta = true;
+	    } 
+	    else {
+		    $respuesta = false;
+		}
+	 
 
 echo $respuesta;
-
-//mysqli_close($conexion);
 
 ?>

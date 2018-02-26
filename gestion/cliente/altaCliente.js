@@ -1,4 +1,4 @@
-window.addEventListener("load",inicio,false);
+Ôªøwindow.addEventListener("load",inicio,false);
 function inicio(){
 	document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
 }
@@ -37,7 +37,7 @@ function aceptarAltaCliente() {
                 method:"POST",
                 cache:false,
                 success: tratarRespuestaCliente,
-                error: tratarErrorCliente      
+                error: tratarRespuestaCliente      
         });
     }
 }
@@ -59,11 +59,11 @@ function validarAltaCliente() {
 	var sNombre =oForm.nombre.value.trim();
 	
 
-	var oExpReg = /^[a-zA-ZÒ—·ÈÌÛ˙¡…Õ”⁄\s]{3,15}$/;
+	var oExpReg = /^[a-zA-ZZ√±√ë√°√©√≠√≥√∫√Å√â√ç√ì√ö\s]{3,15}$/;
 
     if(oExpReg.test(sNombre) == false){
         bValido = false;
-        sError += "Nombre incorrecto<br>";
+        sError += "\nNombre incorrecto";
        $("#nombre").addClass("error");
     }
 	
@@ -71,11 +71,11 @@ function validarAltaCliente() {
     var sApellidos = oForm.apellidos.value.trim();
 	
 
-	var oExpReg = /^[a-zA-ZÒ—·ÈÌÛ˙¡…Õ”⁄\s]{4,50}$/;
+	var oExpReg = /^[a-zA-ZZ√±√ë√°√©√≠√≥√∫√Å√â√ç√ì√ö\s]{4,50}$/;
 	
 	if (oExpReg.test(sApellidos) == false){
         bValido = false;
-        sError += "Apellidos incorrectos<br>";
+        sError += "\nApellidos incorrectos";
         $("#apellidos").addClass("error");
     }
 
@@ -85,7 +85,7 @@ function validarAltaCliente() {
 	
 	if (oExpReg.test(sEmail) == false){
         bValido = false;
-        sError += "Email incorrecto<br>";
+        sError += "\nEmail incorrecto";
         $("#email").addClass("error");
     }
 
@@ -97,18 +97,18 @@ function validarAltaCliente() {
 	
 	if (oExpReg.test(sTelef) == false){
         bValido = false;
-        sError += "TelÈfono incorrecto<br>";
+        sError += "\nTel√©fono incorrecto";
        $("#telefono").addClass("error");
     }
 	
 	var sDireccion= oForm.calle.value.trim();
 
 
-	var oExpReg = /^[0-9a-zA-ZÒ—·ÈÌÛ˙¡…Õ”⁄\s]{3,15}$/;
+	var oExpReg = /^[0-9a-zA-Z√±√ë√°√©√≠√≥√∫√Å√â√ç√ì√ö\s]{3,15}$/;
 	
 	if (oExpReg.test(sDireccion) == false){
 	        bValido = false;
-        sError += "DirecciÛn incorrecta<br>";
+        sError += "\nDirecci√≥n incorrecta";
        $("#calle").addClass("error");
     }
 	
@@ -118,18 +118,18 @@ function validarAltaCliente() {
 	
 	if (oExpReg.test(sCodPost) == false){
 	   bValido = false;
-        sError += "CÛdigo postal incorrecto<br>";
+        sError += "\nC√≥digo postal incorrecto";
        $("#codigopostal").addClass("error");
     }
 	
     var sPais= oForm.pais.value.trim();
 
 
-	var oExpReg = /^[a-zA-ZÒ—·ÈÌÛ˙¡…Õ”⁄\s]{3,15}$/;
+	var oExpReg = /^[a-zA-Z√±√ë√°√©√≠√≥√∫√Å√â√ç√ì√ö\s]{3,15}$/;
 	
 	if (oExpReg.test(sPais) == false){	
 	    bValido = false;
-        sError += "PaÌs incorrecto<br>";
+        sError += "Pa√≠s incorrecto<br>";
        $("#pais").addClass("error");
     }
 	
@@ -146,16 +146,20 @@ function validarAltaCliente() {
 function tratarRespuestaCliente(oArrayRespuesta,sStatus,oXHR)
 {
     $("#divMensajes").dialog("open");
+    console.log(oArrayRespuesta[0]);
+    console.log("dentro de respuesta");
 
     if (oArrayRespuesta[0] == true){
         /*$("#divMensajes").dialog("option","title","Error");
-        $("#pMensaje").text(oArrayRespuesta[1]);*/alert("Cliente registrado previamente");
+        $("#pMensaje").text(oArrayRespuesta[1]);*/
+        alert("Cliente registrado previamente");
     } else {
         /* $('#divFrmAltaCliente').dialog("close");
         $("#divMensajes").dialog("option","title","Alta OK");
         $("#pMensaje").text(oArrayRespuesta[1]);
         $("#divfrmAltaCliente").dialog("close"); */
-		alert("Cliente dado de alta")
+		alert("Cliente dado de alta");
+		oForm.reset();
     }
 }
 
