@@ -1,7 +1,10 @@
-﻿window.addEventListener("load",inicio,false);
+﻿/*window.addEventListener("load",inicio,false);
 function inicio(){
-	document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
-}
+    document.getElementById("aceptarAltaCli").addEventListener("click", aceptarAltaCliente,false);
+}*/
+
+$("#aceptarAltaCli").click(aceptarAltaCliente);
+
 function aceptarAltaCliente() {
 	
 		var oForm=document.getElementById("formAltaCliente");

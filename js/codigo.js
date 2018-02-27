@@ -12,9 +12,9 @@ btnIndex.addEventListener("click", volverIndex, false);
 
 function volverIndex()
 {
-	var formAltaCliente = document.getElementById("formAltaCliente");
+	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
- 	formAltaCliente.reset();
+ 	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -97,7 +97,7 @@ function volverIndex()
 // CLIENTES
 //#########################################################################################
 
-var formAltaCliente = document.getElementById("altaCli");
+/*var formAltaCliente = document.getElementById("altaCli");
 formAltaCliente.addEventListener("click", altaCliente, false);
 
 function altaCliente()
@@ -180,7 +180,7 @@ function altaCliente()
 	document.getElementById("formBajaAduana").style.display = "none";
 	document.getElementById("listaQueja").style.display = "none";
 
-}
+}*/
 
 var formBajaCliente = document.getElementById("bajaCli");
 formBajaCliente.addEventListener("click", bajaCliente, false);
@@ -192,9 +192,9 @@ function bajaCliente()
  	formBajaCliente.style.display = "block";
  	formBajaCliente.reset();
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
@@ -276,9 +276,9 @@ function listCLientes()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "block";
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -372,9 +372,9 @@ function altaEmpleado()
  	var listadoEmpleados = document.getElementById("listadoEmpleados");
  	listadoEmpleados.style.display = "none";
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -456,9 +456,9 @@ function bajaEmpleado()
  	var listadoEmpleados = document.getElementById("listadoEmpleados");
  	listadoEmpleados.style.display = "none";
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -538,9 +538,9 @@ function listaEmpleado()
  	altaEmpleados.style.display = "none";
 	altaEmpleados.reset();
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -618,9 +618,9 @@ function altaArticulo()
  	altaArtic.style.display = "block";
 	altaArtic.reset();
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -700,9 +700,9 @@ function bajaArticulos()
 	var bajaArtic = document.getElementById("formBajArticulo");
  	bajaArtic.style.display = "block";
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -786,9 +786,9 @@ function listArticul()
 	var listadoArtic = document.getElementById("listadoArtic");
  	listadoArtic.style.display = "block";
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -877,9 +877,9 @@ function altaPaquete()
  	bajaArtic.style.display = "none";
  	bajaArtic.reset();
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -955,7 +955,7 @@ function bajaPaquetes()
 {
 	document.getElementById("formBajaPaquete").style.display = "block";
 
-	document.getElementById("formAltaCliente").style.display = "none";
+	//document.getElementById("formAltaCliente").style.display = "none";
 	document.getElementById("formBajaCliente").style.display = "none";
 	document.getElementById("formModiCliente").style.display = "none";
 	document.getElementById("listadoClientes").style.display = "none";
@@ -996,9 +996,9 @@ function listaPaquetesNoEntregado()
 	var verPaquetesNoEntre = document.getElementById("verPaquetesNoEntregados");
  	verPaquetesNoEntre.style.display = "block";
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -1078,9 +1078,9 @@ function listaPaquetesEntregado()
 	var verPaqueteEntre = document.getElementById("verPaquetesEntregados");
  	verPaqueteEntre.style.display = "block";
 	
-	var formAltaCliente = document.getElementById("formAltaCliente");
+	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -1168,9 +1168,9 @@ function altaAduana()
  	
  	rellenaComboArticulos2("listaArticulos");
  	
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -1250,7 +1250,7 @@ function bajaAduanas()
 {
 	document.getElementById("formBajaAduana").style.display = "block";
 
-	document.getElementById("formAltaCliente").style.display = "none";
+	//document.getElementById("formAltaCliente").style.display = "none";
 	document.getElementById("formBajaCliente").style.display = "none";
 	document.getElementById("formModiCliente").style.display = "none";
 	document.getElementById("listadoClientes").style.display = "none";
@@ -1297,9 +1297,9 @@ function verListaAduana()
  	
  	rellenaComboArticulos2("listaArticulos");
  	
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -1384,9 +1384,9 @@ function altaQueja()
  	verAltaAduana.style.display = "none";
 	verAltaAduana.reset();
  
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -1466,7 +1466,7 @@ function bajaQuejas()
 {
 	document.getElementById("formBajaQueja").style.display = "block";
 
-	document.getElementById("formAltaCliente").style.display = "none";
+	//document.getElementById("formAltaCliente").style.display = "none";
 	document.getElementById("formBajaCliente").style.display = "none";
 	document.getElementById("formModiCliente").style.display = "none";
 	document.getElementById("listadoClientes").style.display = "none";
@@ -1517,9 +1517,9 @@ function listadoTodasQuejas()
  	altaEmpleados.style.display = "none";
 	altaEmpleados.reset();
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -1609,9 +1609,9 @@ function mostarUML()
  	altaEmpleados.style.display = "none";
 	altaEmpleados.reset();
 
- 	var formAltaCliente = document.getElementById("formAltaCliente");
+ 	/*var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();
+	formAltaCliente.reset();*/
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
@@ -3461,7 +3461,7 @@ function ocultarFormulariosModificar(){
 	document.getElementById("formModiQuejas").style.display = "none";
 	
 	
-	document.getElementById("formAltaCliente").style.display = "none";
+	//document.getElementById("formAltaCliente").style.display = "none";
 	document.getElementById("formAltaEmpleados").style.display = "none";
 	document.getElementById("formAltaArticulo").style.display = "none";
 	document.getElementById("formAltaPedido").style.display = "none";
