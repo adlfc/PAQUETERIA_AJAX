@@ -1,7 +1,8 @@
-﻿window.addEventListener("load",inicio,false);
+﻿/*window.addEventListener("load",inicio,false);
 function inicio(){
 	document.getElementById("aceptarAltaEmple").addEventListener("click", aceptarAltaEmpleado,false);
-}
+}*/
+$("#aceptarAltaEmple").click(aceptarAltaEmpleado);
 function aceptarAltaEmpleado() {
 	
 		var oForm=document.getElementById("formAltaEmpleados");

@@ -23,9 +23,9 @@ function volverIndex()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
  
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
@@ -113,9 +113,9 @@ function altaCliente()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
- 	altaEmpleados.reset();
+ 	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -199,9 +199,9 @@ function bajaCliente()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -284,9 +284,9 @@ function listCLientes()
  	formBajaCliente.style.display = "none";
 	formBajaCliente.reset();
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -356,7 +356,7 @@ function listCLientes()
 //#########################################################################################
 // EMPLEADOS
 //#########################################################################################
-
+/*
 var altaEmpleados = document.getElementById("altaEmpl");
 altaEmpleados.addEventListener("click", altaEmpleado, false);
 
@@ -439,7 +439,7 @@ function altaEmpleado()
 	document.getElementById("formBajaQueja").style.display = "none";
 	document.getElementById("formBajaAduana").style.display = "none";
 	document.getElementById("listaQueja").style.display = "none";
-}
+}*/
 
 var bajaEmpleados = document.getElementById("bajaEmpl");
 bajaEmpleados.addEventListener("click", bajaEmpleado, false);
@@ -449,9 +449,9 @@ function bajaEmpleado()
 	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "block";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var listadoEmpleados = document.getElementById("listadoEmpleados");
  	listadoEmpleados.style.display = "none";
@@ -534,9 +534,9 @@ function listaEmpleado()
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
@@ -629,9 +629,9 @@ function altaArticulo()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -711,9 +711,9 @@ function bajaArticulos()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -797,9 +797,9 @@ function listArticul()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -888,9 +888,9 @@ function altaPaquete()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -960,7 +960,7 @@ function bajaPaquetes()
 	document.getElementById("formModiCliente").style.display = "none";
 	document.getElementById("listadoClientes").style.display = "none";
 
-	document.getElementById("formAltaEmpleados").style.display = "none";
+	//document.getElementById("formAltaEmpleados").style.display = "none";
 	document.getElementById("formBajaEmple").style.display = "none";
 	document.getElementById("formModiEmpleado").style.display = "none";
 	document.getElementById("listadoEmpleados").style.display = "none";
@@ -1007,9 +1007,9 @@ function listaPaquetesNoEntregado()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -1089,9 +1089,9 @@ function listaPaquetesEntregado()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -1179,9 +1179,9 @@ function altaAduana()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -1255,7 +1255,7 @@ function bajaAduanas()
 	document.getElementById("formModiCliente").style.display = "none";
 	document.getElementById("listadoClientes").style.display = "none";
 
-	document.getElementById("formAltaEmpleados").style.display = "none";
+	//document.getElementById("formAltaEmpleados").style.display = "none";
 	document.getElementById("formBajaEmple").style.display = "none";
 	document.getElementById("formModiEmpleado").style.display = "none";
 	document.getElementById("listadoEmpleados").style.display = "none";
@@ -1308,9 +1308,9 @@ function verListaAduana()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -1395,9 +1395,9 @@ function altaQueja()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -1471,7 +1471,7 @@ function bajaQuejas()
 	document.getElementById("formModiCliente").style.display = "none";
 	document.getElementById("listadoClientes").style.display = "none";
 
-	document.getElementById("formAltaEmpleados").style.display = "none";
+	//document.getElementById("formAltaEmpleados").style.display = "none";
 	document.getElementById("formBajaEmple").style.display = "none";
 	document.getElementById("formModiEmpleado").style.display = "none";
 	document.getElementById("listadoEmpleados").style.display = "none";
@@ -1513,9 +1513,9 @@ function listadoTodasQuejas()
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
@@ -1605,9 +1605,9 @@ function mostarUML()
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
 
- 	var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
-	altaEmpleados.reset();
+	altaEmpleados.reset();*/
 
  	var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
