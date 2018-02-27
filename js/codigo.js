@@ -3462,7 +3462,7 @@ function ocultarFormulariosModificar(){
 	
 	
 	//document.getElementById("formAltaCliente").style.display = "none";
-	document.getElementById("formAltaEmpleados").style.display = "none";
+	//document.getElementById("formAltaEmpleados").style.display = "none";
 	document.getElementById("formAltaArticulo").style.display = "none";
 	document.getElementById("formAltaPedido").style.display = "none";
 	document.getElementById("formAltaAduana").style.display = "none";
