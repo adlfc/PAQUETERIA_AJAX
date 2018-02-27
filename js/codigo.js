@@ -113,9 +113,9 @@ function altaCliente()
  	var listadoClientes = document.getElementById("listadoClientes");
  	listadoClientes.style.display = "none";
 
- 	/*var altaEmpleados = document.getElementById("formAltaEmpleados");
+ 	var altaEmpleados = document.getElementById("formAltaEmpleados");
  	altaEmpleados.style.display = "none";
- 	altaEmpleados.reset();*/
+ 	altaEmpleados.reset();
 
  	var bajaEmpleados = document.getElementById("formBajaEmple");
  	bajaEmpleados.style.display = "none";
@@ -372,9 +372,9 @@ function altaEmpleado()
  	var listadoEmpleados = document.getElementById("listadoEmpleados");
  	listadoEmpleados.style.display = "none";
 
- 	/*var formAltaCliente = document.getElementById("formAltaCliente");
+ 	var formAltaCliente = document.getElementById("formAltaCliente");
  	formAltaCliente.style.display = "none";
-	formAltaCliente.reset();*/
+	formAltaCliente.reset();
 
  	var formBajaCliente = document.getElementById("formBajaCliente");
  	formBajaCliente.style.display = "none";
