@@ -2,7 +2,7 @@
 $(function() {
 
     $('#altaArt').click(cargaAltaArticulo);
-    $("a:not('#altaArt')").click(ocultarAltaCli);
+    $("a:not('#altaArt')").click(ocultarAltaArticulo);
 });
 
 
@@ -29,7 +29,7 @@ $.getScript("gestion/articulo/altaArticulo.js");
     }
 }
 
-function ocultarAltaCli()
+function ocultarAltaArticulo()
 {
 	$('#formAltaArticulo').hide("normal");
 }
