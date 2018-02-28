@@ -97,7 +97,7 @@ $.get('gestion/paquete/consultarPaquetes.php', null, mostrarPaquetes, 'json');
         campos += '<div class="form-group"';
         campos += '<label>Entregado: </label>';
             campos += '<div class="radio">';
-              campos += '<label><input type="radio" name="optradio4" value="Sí" checked>Sí</label>';
+              campos += '<label><input type="radio" name="optradio4" value="Si" checked>Sí</label>';
             campos += '</div>';
             campos += '<div class="radio">';
                 campos += '<label><input type="radio" name="optradio4" value="No">No</label>';
