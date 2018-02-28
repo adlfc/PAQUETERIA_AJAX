@@ -1,7 +1,24 @@
-﻿window.addEventListener("load",inicio,false);
-function inicio(){
-	document.getElementById("aceptarAltaPaquete").addEventListener("click", aceptarAltaPaquete,false);
+﻿
+$.get('gestion/cliente/consultarClientes.php', null, mostrarClientes, 'json');
+
+function mostrarClientes(oClientes, sStatus, oXHR)
+{
+
+
+    $("#listaClientes").children().remove();
+
+    var option = "";
+
+    for(var i=0;i<oClientes.length;i++)
+    {
+      option += "<option value='"+oClientes[i].id+"'>"+oClientes[i].nombre+" "+oClientes[i].apellidos+"</option>";
+    }
+
+    $(option).appendTo('#listaClientes');
 }
+
+    $("#aceptarAltaPaquete").click(aceptarAltaPaquete);
+
 function aceptarAltaPaquete() {
 	
 		var oForm=document.getElementById("formAltaPedido");
@@ -37,7 +54,7 @@ function aceptarAltaPaquete() {
 			
         };
 
-        var oPaquete=JSON.stringify(empleado);
+        var oPaquete=JSON.stringify(paquete);
         $.ajax({url:"gestion/paquete/altaPaquete.php",
                 data:{datos:oPaquete},
                 async:true,
@@ -70,7 +87,8 @@ function validarAltaPaquete() {
 
 	var oExpReg = /^[0-9]+([,])?([0-9]+)?$/;
 	
-	if (oExpReg.test(doTarifa) == false){
+	if (oExpReg.test(doTarifa) == false)
+	{
         bValido = false;
         sError += "\nTarifa incorrecta";
        $("#tarifa").addClass("error");
@@ -84,9 +102,9 @@ var dFechaEntrega= new Date(oForm.fechaEntrega.value.trim()).toLocaleDateString(
 	
 	var oExpReg = /^(\d{1,2})[/](\d{1,2})[/](\d{3,4})$/;
 	
-	if (oExpReg.test(dFechaEntrega) == false){
+	if (oExpReg.test(dFechaEntrega) == false)
+	{
 	
-		if(bValido == true){
         bValido = false;
         sError += "\nFecha incorrecta";
         $("#fechaEntrega").addClass("error");
@@ -98,9 +116,9 @@ var dFechaEntrega= new Date(oForm.fechaEntrega.value.trim()).toLocaleDateString(
 
 	var oExpReg = /^[0-9]+([,])?([0-9]+)?$/;
 	
-	if (oExpReg.test(doVolumen) == false){
+	if (oExpReg.test(doVolumen) == false)
+	{
 	
-		if(bValido == true){
 	        bValido = false;
         sError += "\nVolumen incorrecto";
        $("#volumen").addClass("error");
@@ -114,7 +132,6 @@ var dFechaEntrega= new Date(oForm.fechaEntrega.value.trim()).toLocaleDateString(
 	if (oExpReg.test(doPeso) == false){
 	
 	
-		if(bValido == true){
 	        bValido = false;
         sError += "\nPeso incorrecto";
        $("#peso").addClass("error");
@@ -128,7 +145,6 @@ var dFechaEntrega= new Date(oForm.fechaEntrega.value.trim()).toLocaleDateString(
 	if (oExpReg.test(doValor) == false){
 	
 	
-		if(bValido == true){
 	        bValido = false;
         sError += "\nValor incorrecto";
        $("#valor").addClass("error");

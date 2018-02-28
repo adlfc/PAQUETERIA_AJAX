@@ -1,57 +1,44 @@
-﻿window.addEventListener("load",inicio,false);
+﻿
+
+    $.get('gestion/articulo/consultarPaquetes.php', null, mostrarPaquetes, 'json');
+
+    function mostrarPaquetes(oPaquetes, sStatus, oXHR)
+    {
 
 
+        $("#listaPaquetes").children().remove();
 
-	 
-function inicio(){
-	$.getScript('gestion/articulo/consultarPaquetes.php');
+        var option = "";
 
- function mostrarPaquetes(oPaquetes, sStatus, oXHR)
-     {
-          console.log(oPaquetes.length);
+        for(var i=0;i<oPaquetes.length;i++)
+        {
+          option += "<option value='"+oPaquetes[i].id+"'>"+oPaquetes[i].id+"</option>";
+        }
 
-          $("#formAltaArticulo").children().remove();
+        $(option).appendTo('#listaPaquetes');
+    }
 
-          var option = "<select id='listaPaquetes' name='listaPaquetes' class='form-control'>";
+    $("#aceptarAltaArticulo").click(aceptarAltaArticulo);
 
-     	
-
-     	for(var i=0;i<oPaquetes.length;i++)
-     	{
-     		option += "<option value='"+oPaquetes[i].id+"'>"+oPaquetes[i].descripcion+"</option>";
-     	}
-
-          option += "</option>";
-
-          
-
-     	
-          
-          $("#formAltaArticulo").append(option);
-
-          
-
-     }
-	document.getElementById("aceptarAltaArticulo").addEventListener("click", aceptarAltaArticulo,false);
-}
 function aceptarAltaArticulo() {
-	
+
 		var oForm=document.getElementById("formAltaArticulo");
 		$("input").removeClass("error");
     if(validarAltaArticulo()){
         
         descripcion = oForm.descripcion.value.trim();
         peso = oForm.peso.value.trim();
-		valor = oForm.valor.value.trim();
-		comercial = oForm.optradio2.value.trim();
-		paquete = oForm.listaPaquete.value.trim();
+		    valor = oForm.valor.value.trim();
+		    comercial = oForm.optradio2.value.trim();
+		    paquete = oForm.listaPaquete.value.trim();
+
         var articulo = {
            
             des:descripcion,
             pe:peso,
             val:valor,
-			com:comercial,
-			paq:paquete
+			      com:comercial,
+			      paq:paquete
 			
 			
 			
@@ -127,9 +114,9 @@ function validarAltaArticulo() {
 	
 	
     if(!bValido){
-        /*$("#divMensajes").dialog("open");
+        $("#divMensajes").dialog("open");
         $("#divMensajes").dialog("option","title","Error validacion");
-        $("#pMensaje").html(sError);*/
+        $("#pMensaje").html(sError);
 		alert(sError);
     }
     return bValido;
