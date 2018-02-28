@@ -10,7 +10,7 @@ $(function() {
 function cargaAltaCliente()
 {
     $("form:not('#formAltaCliente')").hide("normal");
-    $("#listadoClientes, #listadoEmpleados, #listadoArtic, #verPaquetesNoEntregados, #verPaquetesEntregados, #listadoAduana, #listaQueja").hide("normal");
+    $("#listadoClientes, #listadoEmpleados, #listadoArtic, #verPaquetesNoEntregados, #verPaquetesEntregados, #listadoAduana, #listaQueja, #uml").hide("normal");
 
     if ($('#formAltaCliente').size() == 0) {
     	$("<div>").appendTo('#formularios').load("cargaDinamica/formAltaCliente.html",
